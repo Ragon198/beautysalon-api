@@ -33,6 +33,7 @@ data class User(
     @NotNull
     val gender: String,
 
+    @Enumerated(EnumType.STRING)
     @NotNull
     val type: TypeUserEnum
 )

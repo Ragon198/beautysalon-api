@@ -1,5 +1,6 @@
 package com.beautysalon.beautysalonapi.data.models
 
+import com.beautysalon.beautysalonapi.data.enums.TypeUserEnum
 import javax.persistence.*
 import javax.validation.constraints.Email
 import javax.validation.constraints.NotNull
@@ -30,5 +31,8 @@ data class User(
     val cellNumber: String,
 
     @NotNull
-    val gender: String
+    val gender: String,
+
+    @NotNull
+    val type: TypeUserEnum
 )

@@ -35,5 +35,8 @@ data class User(
 
     @Enumerated(EnumType.STRING)
     @NotNull
-    val type: TypeUserEnum
+    val type: TypeUserEnum,
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
+    val schedules: List<Schedule>
 )

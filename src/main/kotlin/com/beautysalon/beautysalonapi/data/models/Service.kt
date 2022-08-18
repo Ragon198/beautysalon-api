@@ -8,7 +8,6 @@ import javax.validation.constraints.Size
 @Entity
 @Table(name = "services")
 data class Service(
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long,
@@ -18,5 +17,8 @@ data class Service(
     @NotNull
     val value: BigDecimal,
     @NotNull
-    val duration: Int
+    val duration: Int,
+    @ManyToOne
+    @JoinColumn(name = "schedule_id", foreignKey = ForeignKey(name = "fk_schedule_id"), nullable = true)
+    val schedule: Schedule
 )

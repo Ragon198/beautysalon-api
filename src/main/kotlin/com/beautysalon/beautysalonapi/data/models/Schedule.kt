@@ -1,6 +1,7 @@
 package com.beautysalon.beautysalonapi.data.models
 
 import java.math.BigDecimal
+import java.sql.Timestamp
 import java.util.Date
 import java.util.Timer
 import javax.persistence.*
@@ -18,10 +19,7 @@ data class Schedule(
     val user: User,
 
     @NotNull
-    val date: Date,
-
-    @NotNull
-    val time: Timer,
+    val dateTime: Timestamp,
 
     @NotNull
     val place: String,

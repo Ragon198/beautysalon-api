@@ -25,7 +25,7 @@ data class Schedule(
     val place: String,
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "schedule")
-    val services: List<Service>,
+    val services: List<ScheduleService>,
 
     @NotNull
     val totalTime: Int,
